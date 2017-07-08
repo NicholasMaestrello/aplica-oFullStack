@@ -1,36 +1,7 @@
 <content-header title="Dashboard" subtitle="Version 1.0"></content-header>
-<section class="content">
-  <div class="col-xs-4">
-    <div class="small-box bg-green">
-      <div class="inner">
-        <h3>R$ 10</h3>
-        <p>total de creditos</p>
-      </div>
-      <div class="icon">
-        <i class="fa fa-bank"></i>
-      </div>
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="small-box bg-red">
-      <div class="inner">
-        <h3>R$ 10</h3>
-        <p>total de debitos</p>
-      </div>
-      <div class="icon">
-        <i class="fa fa-credit-card"></i>
-      </div>
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="small-box bg-blue">
-      <div class="inner">
-        <h3>R$ 10</h3>
-        <p>valor consolidado</p>
-      </div>
-      <div class="icon">
-        <i class="fa fa-money"></i>
-      </div>
-    </div>
-  </div>
+<section ng-controller="dashboardCtrl as dash" class="content">
+  <value-box grid="4" color-class="bg-green" value="R$ {{dash.credit | number: 2}}" icon-class="fa fa-bank" text="Total de creditos"></value-box>
+  <value-box grid="4" color-class="bg-red" value="R$ {{dash.debt | number: 2}}" icon-class="fa fa-credit-card" text="Total de debitos"></value-box>
+  <value-box grid="4" color-class="bg-blue" value="R$ {{dash.total | number: 2}}" icon-class="fa fa-money" text="Valor consolidado"></value-box>
+
 </section>

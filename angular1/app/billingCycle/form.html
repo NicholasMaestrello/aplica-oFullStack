@@ -1,0 +1,13 @@
+<div role="form">
+  <div class="box-body">
+    <field id="name" label="Nome" grid="12 6 4" placeholder="Informe ao nome" model="bCtrl.billingCycle.name" readonly="bCtrl.tabDelete"></field>
+    <field id="month" label="Mês" grid="12 6 4" placeholder="Informe ao mês" type="number" model="bCtrl.billingCycle.month" readonly="bCtrl.tabDelete"></field>
+    <field id="year" label="Ano" grid="12 6 4" placeholder="Informe o ano" type="number" model="bCtrl.billingCycle.year" readonly="bCtrl.tabDelete"></field>
+  </div>
+  <div class="box-footer">
+    <button class="btn btn-primary" ng-if="bCtrl.tabCreate " ng-click="bCtrl.create()">Incluir</button>
+    <button class="btn btn-info" ng-if="bCtrl.tabUpdate ">Alterar</button>
+    <button class="btn btn-danger" ng-if="bCtrl.tabDelete " ng-click="bCtrl.delete()">Excluir</button>
+    <button class="btn btn-default" ng-click="bCtrl.refresh()">Cancelar</button>
+  </div>
+</div>
