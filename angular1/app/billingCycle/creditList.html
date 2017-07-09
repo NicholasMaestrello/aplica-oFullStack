@@ -1,0 +1,26 @@
+<div class="col-xs-12">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Valor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="credit in bCtrl.billingCycle.credits">
+        <td>
+          <input ng-model="credit.name" class="form-control" placeholder="Informe o item">
+        </td>
+        <td>
+          <input ng-model="credit.value" class="form-control" placeholder="Informe o valor" ng-change="bCtrl.calculateValues()" ng-readonly="bCtrl.tabDelete" type="number"/>
+        </td>
+        <td class="table-actions">
+          <button class="btn btn-success" ng-disabled="bCtrl.tabDelete" ng-click="bCtrl.addCredit($index)"><i class="fa fa-plus"></i></button>
+          <button class="btn btn-warning" ng-disabled="bCtrl.tabDelete" ng-click="bCtrl.cloneCredit($index, credit)"><i class="fa fa-clone"></i></button>
+          <button class="btn btn-danger" ng-disabled="bCtrl.tabDelete" ng-click="bCtrl.deleteCredit($index)"><i class="fa fa-trash-o"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
