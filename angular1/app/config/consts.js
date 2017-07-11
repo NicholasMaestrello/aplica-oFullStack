@@ -5,6 +5,8 @@ angular.module('myApp').constant('consts', {
   year: '2017',
   site: 'http://cod3r.com.br',
   apiUrl: 'http://localhost:9000/api',
+  oapiUrl: 'http://localhost:9000/oapi',
+  userKey: '_primeira_app_user'
 }).run(['$rootScope', 'consts', function($rootScope, consts) {
   $rootScope.consts = consts
 }])
